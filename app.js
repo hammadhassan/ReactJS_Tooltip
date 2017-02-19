@@ -20,20 +20,20 @@ class Tooltip extends React.Component {
       left: (this.state.left || 0) - 35
     };
     return React.createElement(
-      'div',
-      { style: { display: 'inline' } },
+      "div",
+      { style: { display: "inline" } },
       React.createElement(
-        'span',
-        { style: { color: 'yellow' }, onMouseEnter: this.toggle, onMouseOut: this.toggle },
+        "span",
+        { style: { color: "yellow" }, onMouseEnter: this.toggle, onMouseOut: this.toggle },
         this.props.children
       ),
       React.createElement(
-        'div',
-        { className: 'tooltip bottom', style: style, role: 'tooltip' },
-        React.createElement('div', { className: 'tooltip-arrow' }),
+        "div",
+        { className: "tooltip bottom", style: style, role: "tooltip" },
+        React.createElement("div", { className: "tooltip-arrow" }),
         React.createElement(
-          'div',
-          { className: 'tooltip-inner' },
+          "div",
+          { className: "tooltip-inner" },
           this.props.text
         )
       )
@@ -42,27 +42,27 @@ class Tooltip extends React.Component {
 }
 
 ReactDOM.render(React.createElement(
-  'div',
+  "div",
   null,
   React.createElement(
     Tooltip,
     { text: "Sixteen time World Champion and equal the record of Rich Flair's 16 World Championship" },
-    'John Cena ',
+    "John Cena ",
     React.createElement(
       "img",
       { src: "images/cena.jpg" },
       null
       )
   ),
-  ' a WWE Superstar and one of the highest paid professonial wrestler in the world. ',
+  " a WWE Superstar and one of the highest paid professonial wrestler in the world. ",
   React.createElement(
     "br",
     null
     ),    
   React.createElement(
     Tooltip,
-    { text: 'First undfeated World Champion in History of Wrestling' },
-    'Bill Goldberg ',
+    { text: "First undfeated World Champion in History of Wrestling" },
+    "Bill Goldberg ",
     React.createElement(
       "img",
       { src: "images/goldberg.png" },
@@ -76,13 +76,15 @@ ReactDOM.render(React.createElement(
     ),  
   React.createElement(
     Tooltip,
-    { text: 'Defeat The Undertaker in Wrestlemania 31 for his undfeated streak in Wrestlemania (21-1)' },
-    'Brock Lesnar ',
+    { text: "Defeat The Undertaker in Wrestlemania 31 for his undfeated streak in Wrestlemania (21-1)" },
+    "Brock Lesnar ",
     React.createElement(
       "img",
       { src: "images/lesnar.png", width: "260px", height: "416px;"},
       null
       )
   ),
-  ' the beast incarnate famous for his Suplex City that makes him one of the dangerous superstar in WWe'
-), document.getElementById('tooltip'));
+  " the beast incarnate famous for his Suplex City that makes him one of the dangerous superstar in WWe"
+), 
+  document.getElementById("tooltip")
+  );
